@@ -1,0 +1,10 @@
+CREATE TABLE pessoa(
+	id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+	nome VARCHAR(50) NOT NULL,
+	nomeFantasia VARCHAR(50),
+	cpfCnpj VARCHAR(11) NOT NULL UNIQUE,
+	user_id BIGINT NOT NULL,
+	endereco_id BIGINT,
+	FOREIGN KEY (endereco_id) REFERENCES endereco(id),
+	FOREIGN KEY (user_id) REFERENCES users(id)
+);

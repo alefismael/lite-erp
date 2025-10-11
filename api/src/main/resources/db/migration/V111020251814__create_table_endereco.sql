@@ -1,0 +1,9 @@
+CREATE TABLE endereco(
+	id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+	numero INTEGER,
+	sn SMALLINT,
+	bairro VARCHAR(50),
+	cep VARCHAR(8),
+	cidade_id BIGINT,
+	FOREIGN KEY (cidade_id) REFERENCES cidade(id)
+);
