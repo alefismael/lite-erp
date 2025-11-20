@@ -20,7 +20,7 @@ function Login() {
   }
   return (
     <Flex width="100vw" height="100vh" align="center" justify="center">
-      <Card.Root maxW="sm">
+      <Card.Root maxW="500px" w="90vw">
         <Card.Header>
           <Card.Title>Login</Card.Title>
         </Card.Header>

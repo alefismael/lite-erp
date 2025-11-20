@@ -16,6 +16,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  *
@@ -24,6 +25,7 @@ import lombok.Data;
 
 @Entity(name="users")
 @Data
+@NoArgsConstructor
 public class User implements UserDetails{
 	
 	private static final long serialVersionUID = 1L;

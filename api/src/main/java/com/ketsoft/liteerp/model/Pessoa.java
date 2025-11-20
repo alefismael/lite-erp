@@ -7,6 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import lombok.Data;
 
 @Entity(name="pessoa")
@@ -25,8 +26,8 @@ public class Pessoa {
 	String nomeFantasia;
 	@Column(nullable = false, unique = true, length = 11)
 	String cpfCnpj;
-	@ManyToOne
-	@JoinColumn(name = "endereco_id", referencedColumnName = "id")
+	@OneToOne
+	@JoinColumn(name = "endereco_id", referencedColumnName = "id", unique = true)
 	Endereco endereco;
 	
 }

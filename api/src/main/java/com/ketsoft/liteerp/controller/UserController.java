@@ -89,7 +89,7 @@ public class UserController {
 	
 	@PostMapping("/login")
     public ResponseEntity<RecoveryJwtTokenDTO> authenticateUser(@RequestBody UserDTO loginUserDto) {
-        RecoveryJwtTokenDTO token = service.authenticateUser(loginUserDto);
+		RecoveryJwtTokenDTO token = service.authenticateUser(loginUserDto);
         return new ResponseEntity<>(token, HttpStatus.OK);
     }
 
